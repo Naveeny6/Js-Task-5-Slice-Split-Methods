@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice & Split</title>
+</head>
+
+<body>
+
+    <h1>String Methods and split with Examples For code open script.js File</h1>
+
+    <img src="./Screenshot 2024-10-26 203826.png" width="100%" height="500px" alt="">
+
+    <script>
+
+        // String Methods
+        console.log("String Methods:-")
+        console.log("\nConcatenation:-")
+        // Concatenation
+
+        var firstname = "Naveen"
+        var lastname = "Yeturu"
+        var fullname = firstname+ " " + lastname
+        console.log(firstname.concat(" ",lastname))
+        console.log("Concatenation:-used for joining 2 or more strings:",fullname)
+
+        // Includes
+
+        console.log("\nInclude Method:-")
+        var inc = "HTML,CSS,JS,GIT"
+        var result = inc.includes("JS")
+        var result2 = inc.includes("js")
+        console.log("includes() method returns true if a string contains a specified string:",result)
+        console.log("includes() method returns false if a string does not contains a specified string:",result2)
+        
+
+        // Slice Method
+
+        //Slice using Positive Index
+
+        console.log("\nSlicing Method:-")
+        var a = "Naveen Yeturu"
+        console.log("Slice() using Positive Index on String :", a.slice(0, 7))
+
+        // Slice Using Negative Index
+
+        
+        var b = "Naveen Yeturu"
+        console.log("Slice() using Negative Index on String :", b.slice(-14, -7))
+
+        
+        var c = ["Naveen", "Jani", "Omesh"]
+        console.log("Slice() using Positive Index on Array :", c.slice(0, 2))
+
+
+
+
+        // Split
+        console.log("\nSplit Method:-")
+        var text = "Html CSS JS Git";
+        console.log(text.split(" "));
+
+
+
+
+        var d = "This is my day!Naveen"
+        var e = d.split(" ", 2)
+        console.log(e)
+
+        text = "one two three four five"
+        result = text.split(' ', 2)
+        console.log(result)
+
+
+        // Split Method
+
+        
+        console.log("\nExample-1:-")
+
+        let sp1 = "Nav@een Yeturu"
+        console.log(sp1)
+        console.log(sp1.split(''),"this will print each charecter sepeated by single quote and comma")
+        console.log(sp1.split(" "),"this will print each word seperated by comma")
+        console.log(sp1.split("@"),"this will delete the @ char which is present in given string")
+
+
+        console.log("\nExample-2:-")
+
+        let spl2 ="Na_vee_n Ye@tu@ru"
+        console.log(spl2.split("_"),"split the string with which is present in given string")
+        console.log(spl2.split("_").join(""),"join the string with seperator")
+        console.log(spl2.split("@"),"split the string with which is present in given string")
+        console.log(spl2.split("_").join("").split("@").join(""))
+
+        console.log("\nExample-3:-")
+
+        let spl3="Nav_e@e_n Y@e_tu_ru"
+        console.log(spl3)
+        console.log(spl3.split("_").join("").split("@").join(""),"using split we will delete the _ @ char which is present in given string and by using join we convert array to string")
+        
+        console.log("\nExample-4:-")
+        
+        let spl4="H-T-M-L C@S@S J_S"
+        console.log(spl4)
+        console.log(spl4.split("-").join("").split("@").join("").split("_").join(""))        
+
+
+        console.log("\nExample-5:-")
+        let spl5="J-A*VA S#CR@I*PT"
+        console.log(spl5)
+        console.log(spl5.split("-").join("").split("*").join("").split("#").join("").split("@").join(""))
+
+        console.log("\nExample-6:-")
+        let spl6="Naveen Y@turu"
+        console.log(spl6)
+        console.log(spl6.split("@").join("e"))
+
+        console.log("\nExample-7:-")
+        let spl7="fu#l&l S&t&ac#k"
+        console.log(spl7)
+        console.log(spl7.split("#").join("").split("&").join(""))
+
+        console.log("\nExample-8:-")
+        let spl8="N1A1V1E1E1N"
+        console.log(spl8)
+        console.log(spl8.split("1").join(""))
+
+        console.log("\nExample-9:-")
+        let spl9="Naveen- J@ani- Ome-sh"
+        console.log(spl9)
+        console.log(spl9.split("-").join("").split("@").join(""))
+
+        console.log("\nExample-10:-")
+        let spl10="I -LO-V@E -M@Y -DA@D"
+        console.log(spl10)
+        console.log(spl10.split("-").join("").split("@").join(""))
+
+
+    </script>
+
+</body>
+
+</html>
